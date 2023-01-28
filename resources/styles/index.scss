@@ -1,8 +1,8 @@
 :root  {
     --light-ui: #FAFAFA;
-    --dark-ui: #1E1E24;
+    --dark-ui: #292929;
 
-    --red-main-accent: #92140c;
+    --red-main-accent: #EA2525;
     --black-main-accent: #040404;
 
     --yellow-accent: #ecd043;
@@ -18,18 +18,23 @@
 body {
     background-color: var(--light-ui);
     font-family: 'inter', sans-serif;
+    align-items: center;
 }
 
 #header {
-    margin: auto;
-    width: 80vw;
-    max-width: 100rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
     height: 7rem;
 
     .hiring-banner {
-        width: inherit;
+        margin: auto;
+        width: 75%;
+        max-width: 100rem;
         height: 40%;
-        background-color: var(--dark-ui);
+        background-color: rgba(255, 255, 255, .15);  
+        backdrop-filter: blur(5px);
+        border-radius:0 0 12px 12px;
         
         display: flex;
         align-items: center;
@@ -48,12 +53,14 @@ body {
     }
 
     .nav-banner {
-        width: inherit;
+        margin: auto;
+        width: 75%;
+        max-width: 100rem;
         height: 60%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        color: var(--light-ui);
         .nav-banner-block1 {
             width: 40%;
             height: 100%;
@@ -95,5 +102,62 @@ body {
 }
 
 #Home {
-
+    background-color: var(--dark-ui);
+    .home-hero-wrapper {
+        margin: auto;
+        padding-top: 8rem;
+        padding-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .home-hero {
+            line-height: 3.3rem;
+            color: var(--light-ui);
+            h1 {
+                font-weight: 700;
+                font-size: 2.8rem;
+            }
+            h3 {
+                font-weight: 600;
+                font-size: 1.6rem;
+            }
+            button {
+                transition: all .5s ease;
+                color: var(--light-ui);
+                border: 3px solid var(--yellow-accent);
+                text-align: center;;
+                font-size: 1.1rem;
+                background-color : transparent;
+                padding: 1rem;
+                margin-top: 1rem;
+                outline: none;
+                border-radius: 4px;
+                &:hover {
+                    color: var(--dark-ui);
+                    background-color: var(--yellow-accent);
+                }
+            }
+        }
+        .home-hero-iso {
+            width: auto;
+            img {
+                width: 100%;
+                min-width: 25rem;
+                max-width: 35rem;
+                height: auto;
+            }
+        }
+    }
+    .home-hero-2 {
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            color: var(--light-ui);
+            font-size: 1.5rem;
+            font-family: 'Solitreo', sans-serif;
+        }
+    }
 }
