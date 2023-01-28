@@ -1,3 +1,99 @@
 :root  {
-    
+    --light-ui: #FAFAFA;
+    --dark-ui: #1E1E24;
+
+    --red-main-accent: #92140c;
+    --black-main-accent: #040404;
+
+    --yellow-accent: #ecd043;
+    --dark-blue-accent: #111D4A;
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-ui);
+    font-family: 'inter', sans-serif;
+}
+
+#header {
+    margin: auto;
+    width: 80vw;
+    max-width: 100rem;
+    height: 7rem;
+
+    .hiring-banner {
+        width: inherit;
+        height: 40%;
+        background-color: var(--dark-ui);
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--light-ui);
+
+        span {
+            padding: 0 .5rem;
+        }
+
+        .hiring-line {
+            border: 1px solid var(--light-ui);
+            width: 1rem;
+        }
+    }
+
+    .nav-banner {
+        width: inherit;
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-banner-block1 {
+            width: 40%;
+            height: 100%;
+            .nav-block1-wrapper{
+                width: 100%;
+                height: inherit;
+                display: flex;
+                justify-content: flex-start;
+
+                img {
+                    width: 12rem;
+                    min-width: 8rem;
+                }
+            }
+        }
+        .nav-banner-block2 {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul {
+                width: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                li {
+                    font-weight: 600;
+                    padding: 1rem .5rem 0 0;
+                    .call-us {
+                        color: var(--yellow-accent);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Home {
+
 }

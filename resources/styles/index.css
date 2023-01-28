@@ -1,1 +1,84 @@
-/*# sourceMappingURL=index.css.map */
+:root {
+  --light-ui: #FAFAFA;
+  --dark-ui: #1E1E24;
+  --red-main-accent: #92140c;
+  --black-main-accent: #040404;
+  --yellow-accent: #ecd043;
+  --dark-blue-accent: #111D4A;
+}
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-ui);
+  font-family: "inter", sans-serif;
+}
+
+#header {
+  margin: auto;
+  width: 80vw;
+  max-width: 100rem;
+  height: 7rem;
+}
+#header .hiring-banner {
+  width: inherit;
+  height: 40%;
+  background-color: var(--dark-ui);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-ui);
+}
+#header .hiring-banner span {
+  padding: 0 0.5rem;
+}
+#header .hiring-banner .hiring-line {
+  border: 1px solid var(--light-ui);
+  width: 1rem;
+}
+#header .nav-banner {
+  width: inherit;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header .nav-banner .nav-banner-block1 {
+  width: 40%;
+  height: 100%;
+}
+#header .nav-banner .nav-banner-block1 .nav-block1-wrapper {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+}
+#header .nav-banner .nav-banner-block1 .nav-block1-wrapper img {
+  width: 12rem;
+  min-width: 8rem;
+}
+#header .nav-banner .nav-banner-block2 {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .nav-banner .nav-banner-block2 ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .nav-banner .nav-banner-block2 ul li {
+  font-weight: 600;
+  padding: 1rem 0.5rem 0 0;
+}
+#header .nav-banner .nav-banner-block2 ul li .call-us {
+  color: var(--yellow-accent);
+}/*# sourceMappingURL=index.css.map */
