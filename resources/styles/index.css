@@ -15,7 +15,7 @@
 
 body {
   background-color: var(--light-ui);
-  font-family: "inter", sans-serif;
+  font-family: "inter", sans-sesrif;
   align-items: center;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 #Home {
-  background-color: var(--dark-ui);
+  background-color: rgb(15, 15, 15);
 }
 #Home .home-hero-wrapper {
   margin: auto;
