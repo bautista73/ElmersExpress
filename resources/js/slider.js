@@ -30,5 +30,5 @@ function showSlides() {
     if (slideIndex > slides.length) {slideIndex = 1} 
     slides[slideIndex - 1].classList.add("active");
     dots[slideIndex-1].innerHTML = dotmark_active;
-    setTimeout(showSlides, 6000); // Change image every 2 seconds
+    setTimeout(showSlides, 40000); 
 }

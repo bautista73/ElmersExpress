@@ -12,8 +12,15 @@
     <title>Elmer's Express</title>
 </head>
 <body>
-    <header id="header">
-        
+    <header id="Header">
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Estimates</li>
+            <li>Payments</li>
+            <li>About</li>
+            <li>Call or Text Us <span class="call-us">1-425-791-6151</span></li>
+        </ul>
     </header>
     <main>
         <section id="Home">
@@ -22,17 +29,28 @@
                     <div class="slider-container">
                         <ul class="slider">
                           <li class="slide fade active">
-                            <div class="slide__caption">Let`s talk about summer</div>
+                            <div class="slide__caption">Trusted By Many</div>
+                            <button class="slide_btn hologram-btn">See More</button>
                           </li>
                           <li class="slide fade">
-                            <div class="slide__caption">Let`s talk about freedom</div>
+                            <div class="slide__caption">Furniture Delivery, Commercial & Household Moving</div>
+                            <button class="slide_btn hologram-btn"></button>
                           </li>
                           <li class="slide fade">
-                            <div class="slide__caption">Let`s talk about travelling</div>
+                            <div class="slide__caption">Receiving & Warehousing</div>
+                            <button class="slide_btn hologram-btn"></button>
                           </li>
                         </ul>
-                        <span class="prev" onClick="slide_toggle(-1)"><</span>
-                        <span class="next" onClick="slide_toggle(1)">></span>
+                        <span class="prev" onClick="slide_toggle(-1)">
+                            <div class="circleOne">
+                                <div class="arrow one"><i class="fa-solid fa-angle-left"></i></div>
+                            </div>
+                        </span>
+                        <span class="next" onClick="slide_toggle(1)">
+                            <div class="circleTwo">
+                                <div class="arrow two"><i class="fa-solid fa-angle-right"></i></div>
+                            </div>
+                        </span>
                       <div class="dots">
                         <span class="dot" onClick="getSlide(1)">&#9679;</span>
                         <span class="dot" onClick="getSlide(2)">&#9675;</span>
@@ -40,7 +58,17 @@
                       </div>
                 </div>
                 <div class="home-nav">
-
+                    <div class="home-nav-top-wrapper">
+                        <h1>Elmers Express</h1>
+                        <div class="nav-statement">
+                            <p>Elmer's Express, established in 2009, offers a full range of furniture delivery and moving services to the Puget Sound region for commercial and residential customers.</p>
+                        </div>
+                    </div>
+                    <div class="home-nav-bottom-wrapper">
+                        <img src="/resources/Images/Logo-Yellow-NBG.svg" alt="Elmer's Express Cheetah"/>
+                        <span class="nav-quote"><em>"Going the extra mile with a smile"</em></span>
+                        <button class="btn hover-opacity"><span>Request an Estimate</span></button>
+                    </div>
                 </div>
             </div>
         </section>

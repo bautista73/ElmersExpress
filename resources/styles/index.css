@@ -1,7 +1,11 @@
 @import url(/resources/styles/slider.css);
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap");
 :root {
   --light-ui: #f8f8f8;
-  --dark-ui: #292929;
+  --dark-ui: #060606;
+  --gray-ui: rgb(167, 167, 167);
+  --dark-gray-ui: rgb(58, 58, 58);
   --red-main-accent: #b31212;
   --black-main-accent: #040404;
   --yellow-accent: #FAB71C;
@@ -15,22 +19,94 @@
 }
 
 body {
-  background-color: var(--light-ui);
-  font-family: "inter", sans-sesrif;
+  background-color: var(--dark-ui);
+  font-family: "inter", sans-serif;
+}
+
+#Header {
+  width: 100%;
+  height: 2.8rem;
+  background-color: var(--yellow-accent);
+}
+#Header ul {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  background-color: var(--dark-ui);
+  border-radius: 0 0 12px 12px;
+}
+#Header ul li {
+  color: var(--light-ui);
+}
+#Header ul li .call-us {
+  color: var(--yellow-accent);
 }
 
 #Home {
-  height: 100vh;
-  background-color: var(--dark-ui);
+  height: 94vh;
 }
 #Home .home-wrapper {
-  height: inherit;
+  height: 100%;
 }
 #Home .home-wrapper .home-hero {
-  height: 65%;
-  background: url();
+  height: 60%;
 }
 #Home .home-wrapper .home-nav {
-  @import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600;700&display=swap");
-  height: 35%;
+  height: 65%;
+  color: var(--light-ui);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#Home .home-wrapper .home-nav .home-nav-top-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+}
+#Home .home-wrapper .home-nav .home-nav-top-wrapper h1 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5rem;
+  letter-spacing: -4px;
+}
+#Home .home-wrapper .home-nav .home-nav-top-wrapper .nav-statement {
+  line-height: 22px;
+  width: 50%;
+}
+#Home .home-wrapper .home-nav .home-nav-bottom-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Home .home-wrapper .home-nav .home-nav-bottom-wrapper img {
+  width: 6.2rem;
+}
+#Home .home-wrapper .home-nav .home-nav-bottom-wrapper .nav-quote {
+  font-size: 1.3rem;
+  font-family: "Overpass", sans-serif;
+  color: var(--gray-ui);
+}
+#Home .home-wrapper .home-nav .home-nav-bottom-wrapper button {
+  transition: all 0.5s ease;
+  color: var(--light-ui);
+  border: 3px solid var(--yellow-accent);
+  text-align: center;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 4px;
+}
+#Home .home-wrapper .home-nav .home-nav-bottom-wrapper button:hover {
+  color: var(--dark-ui);
+  background-color: var(--yellow-accent);
 }/*# sourceMappingURL=index.css.map */
