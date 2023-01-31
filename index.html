@@ -13,51 +13,38 @@
 </head>
 <body>
     <header id="header">
-        <div class="hiring-banner hiring-banner-link" onclick="">
-            <span>We're hiring!</span><hr class="hiring-line"> <span>Apply with us today</span><hr class="hiring-line"> <span>Call Elmer for more information or explore job openings</span><span><i class="fa-solid fa-up-right-from-square"></i></span>
-        </div>
-        <nav class="nav-banner">
-            <div class="nav-banner-block1">
-                <div class="nav-block1-wrapper">
-                    <img src="/resources/Images/Logo-Text.svg" alt="Elmers Express" onclick="">
-                </div>
-            </div>
-            <div class="nav-banner-block2">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <!-- <li>Estimates</li> -->
-                    <!-- <li>Forms & Legal</li> -->
-                    <!-- <li>Our Team</li> -->
-                    <!-- <li>Payments & Contact</li> -->
-                    <li>Call or Text Us <span class="call-us">1-425-791-6151</span></li>
-                </ul>
-            </div>
-        </nav>
+        
     </header>
     <main>
         <section id="Home">
-            <div class="home-hero-wrapper">
+            <div class="home-wrapper">
                 <div class="home-hero">
-                    <h1>Elmer's Express</h1>
-                    <h3>Furniture Delivery, Receiving & Warehousing</h3>
-                    <h3>Commercial & Residential Moving</h3>
-                    <button class="btn hover-opacity"><span>Request an Estimate</span></button>
+                    <div class="slider-container">
+                        <ul class="slider">
+                          <li class="slide fade active">
+                            <div class="slide__caption">Let`s talk about summer</div>
+                          </li>
+                          <li class="slide fade">
+                            <div class="slide__caption">Let`s talk about freedom</div>
+                          </li>
+                          <li class="slide fade">
+                            <div class="slide__caption">Let`s talk about travelling</div>
+                          </li>
+                        </ul>
+                        <span class="prev" onClick="slide_toggle(-1)"><</span>
+                        <span class="next" onClick="slide_toggle(1)">></span>
+                      <div class="dots">
+                        <span class="dot" onClick="getSlide(1)">&#9679;</span>
+                        <span class="dot" onClick="getSlide(2)">&#9675;</span>
+                        <span class="dot" onClick="getSlide(3)">&#9675;</span>
+                      </div>
                 </div>
-                <div class="home-hero-iso">
-                    <img src="/resources/Images/EXHERO.png" />
-                </div>
-            </div>
-            <div class="home-hero-2">
-                <div class="hero-2-quote">
-                    <h3>"Going the extra mile with a smile!"</h3>
-                </div>
-            </div>
-        </section>
-        <section id="">
+                <div class="home-nav">
 
+                </div>
+            </div>
         </section>
     </main>
+    <script src="/resources/js/slider.js"></script>
 </body>
 </html>

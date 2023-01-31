@@ -1,9 +1,10 @@
+@import url(/resources/styles/slider.css);
 :root {
   --light-ui: #f8f8f8;
   --dark-ui: #292929;
-  --red-main-accent: #EA2525;
+  --red-main-accent: #b31212;
   --black-main-accent: #040404;
-  --yellow-accent: #ecd043;
+  --yellow-accent: #FAB71C;
   --dark-blue-accent: #111D4A;
 }
 
@@ -16,136 +17,20 @@
 body {
   background-color: var(--light-ui);
   font-family: "inter", sans-sesrif;
-  align-items: center;
 }
 
-#header {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 7rem;
+#Home {
+  height: 100vh;
+  background-color: var(--dark-ui);
 }
-#header .hiring-banner {
-  margin: auto;
-  width: 75%;
-  max-width: 100rem;
-  height: 40%;
-  background-color: rgba(0, 0, 0, 0.65);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  border-radius: 0 0 12px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--light-ui);
-}
-#header .hiring-banner span {
-  padding: 0 0.5rem;
-}
-#header .hiring-banner .hiring-line {
-  border: 1px solid var(--light-ui);
-  width: 1rem;
-}
-#header .nav-banner {
-  margin: auto;
-  width: 75%;
-  max-width: 100rem;
-  height: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--dark-ui);
-}
-#header .nav-banner .nav-banner-block1 {
-  width: 40%;
-  height: 100%;
-}
-#header .nav-banner .nav-banner-block1 .nav-block1-wrapper {
-  width: 100%;
+#Home .home-wrapper {
   height: inherit;
-  display: flex;
-  justify-content: flex-start;
 }
-#header .nav-banner .nav-banner-block1 .nav-block1-wrapper img {
-  width: 12rem;
-  min-width: 8rem;
+#Home .home-wrapper .home-hero {
+  height: 65%;
+  background: url();
 }
-#header .nav-banner .nav-banner-block2 {
-  height: 100%;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#header .nav-banner .nav-banner-block2 ul {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#header .nav-banner .nav-banner-block2 ul li {
-  font-weight: 600;
-  padding: 1rem 0.5rem 0 0;
-}
-#header .nav-banner .nav-banner-block2 ul li .call-us {
-  color: var(--yellow-accent);
-}
-
-#Home .home-hero-wrapper {
-  margin: auto;
-  padding-top: 8rem;
-  padding-bottom: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#Home .home-hero-wrapper .home-hero {
-  line-height: 3.3rem;
-  color: var(--dark-ui);
-}
-#Home .home-hero-wrapper .home-hero h1 {
-  font-weight: 700;
-  font-size: 2.8rem;
-}
-#Home .home-hero-wrapper .home-hero h3 {
-  font-weight: 600;
-  font-size: 1.6rem;
-}
-#Home .home-hero-wrapper .home-hero button {
-  transition: all 0.5s ease;
-  color: var(--dark-ui);
-  border: 3px solid var(--yellow-accent);
-  text-align: center;
-  font-size: 1.1rem;
-  background-color: transparent;
-  padding: 1rem;
-  margin-top: 1rem;
-  outline: none;
-  border-radius: 4px;
-}
-#Home .home-hero-wrapper .home-hero button:hover {
-  color: var(--dark-ui);
-  background-color: var(--yellow-accent);
-}
-#Home .home-hero-wrapper .home-hero-iso {
-  width: auto;
-}
-#Home .home-hero-wrapper .home-hero-iso img {
-  width: 100%;
-  min-width: 25rem;
-  max-width: 35rem;
-  height: auto;
-}
-#Home .home-hero-2 {
-  width: 100%;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#Home .home-hero-2 h3 {
-  color: var(--dark-ui);
-  font-size: 1.5rem;
-  font-family: "Solitreo", sans-serif;
+#Home .home-wrapper .home-nav {
+  @import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600;700&display=swap");
+  height: 35%;
 }/*# sourceMappingURL=index.css.map */
