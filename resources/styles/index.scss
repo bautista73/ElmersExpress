@@ -1,5 +1,5 @@
 :root  {
-    --light-ui: #FAFAFA;
+    --light-ui: #f8f8f8;
     --dark-ui: #292929;
 
     --red-main-accent: #EA2525;
@@ -32,7 +32,7 @@ body {
         width: 75%;
         max-width: 100rem;
         height: 40%;
-        background-color: rgba(255, 255, 255, .15);  
+        background-color: rgba(0, 0, 0, 0.65);  
         backdrop-filter: blur(5px);
         border-radius:0 0 12px 12px;
         
@@ -60,7 +60,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: var(--light-ui);
+        color: var(--dark-ui);
         .nav-banner-block1 {
             width: 40%;
             height: 100%;
@@ -102,17 +102,17 @@ body {
 }
 
 #Home {
-    background-color: rgb(15, 15, 15);
+
     .home-hero-wrapper {
         margin: auto;
         padding-top: 8rem;
         padding-bottom: 1.5rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         .home-hero {
             line-height: 3.3rem;
-            color: var(--light-ui);
+            color: var(--dark-ui);
             h1 {
                 font-weight: 700;
                 font-size: 2.8rem;
@@ -123,7 +123,7 @@ body {
             }
             button {
                 transition: all .5s ease;
-                color: var(--light-ui);
+                color: var(--dark-ui);
                 border: 3px solid var(--yellow-accent);
                 text-align: center;;
                 font-size: 1.1rem;
@@ -155,7 +155,7 @@ body {
         justify-content: center;
         align-items: center;
         h3 {
-            color: var(--light-ui);
+            color: var(--dark-ui);
             font-size: 1.5rem;
             font-family: 'Solitreo', sans-serif;
         }

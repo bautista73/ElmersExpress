@@ -1,5 +1,5 @@
 :root {
-  --light-ui: #FAFAFA;
+  --light-ui: #f8f8f8;
   --dark-ui: #292929;
   --red-main-accent: #EA2525;
   --black-main-accent: #040404;
@@ -30,7 +30,7 @@ body {
   width: 75%;
   max-width: 100rem;
   height: 40%;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(0, 0, 0, 0.65);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   border-radius: 0 0 12px 12px;
@@ -54,7 +54,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--light-ui);
+  color: var(--dark-ui);
 }
 #header .nav-banner .nav-banner-block1 {
   width: 40%;
@@ -92,20 +92,17 @@ body {
   color: var(--yellow-accent);
 }
 
-#Home {
-  background-color: rgb(15, 15, 15);
-}
 #Home .home-hero-wrapper {
   margin: auto;
   padding-top: 8rem;
   padding-bottom: 1.5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 #Home .home-hero-wrapper .home-hero {
   line-height: 3.3rem;
-  color: var(--light-ui);
+  color: var(--dark-ui);
 }
 #Home .home-hero-wrapper .home-hero h1 {
   font-weight: 700;
@@ -117,7 +114,7 @@ body {
 }
 #Home .home-hero-wrapper .home-hero button {
   transition: all 0.5s ease;
-  color: var(--light-ui);
+  color: var(--dark-ui);
   border: 3px solid var(--yellow-accent);
   text-align: center;
   font-size: 1.1rem;
@@ -148,7 +145,7 @@ body {
   align-items: center;
 }
 #Home .home-hero-2 h3 {
-  color: var(--light-ui);
+  color: var(--dark-ui);
   font-size: 1.5rem;
   font-family: "Solitreo", sans-serif;
 }/*# sourceMappingURL=index.css.map */
