@@ -182,7 +182,7 @@ li{
     text-decoration: none;
     transition: all 250ms ease;
       &:before,
-      &:after{
+      &:after {
         content: '';
         position: absolute;
         left: 0;
