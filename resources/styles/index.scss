@@ -50,7 +50,7 @@ body {
 }
 
 #Home {
-    height: 94vh;
+    height: 97vh;
 
     .home-wrapper {
         height: 100%;
@@ -118,5 +118,53 @@ body {
                 }
             }
         }
+    }
+}
+
+#Services {
+    height: 94vh;
+    background-color: var(--light-ui);
+    .services-top-wrapper {
+        width: 70%;
+        height: 38%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        line-height: 1.7rem;
+        span {
+            color: var(--dark-gray-ui);
+            font-size: 1.2rem;
+            
+        }
+        h2 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .services-bottom-wrapper {
+        margin: auto;
+        width: 89%;
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        .service-block {
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            .services-block-text {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+        }
+    }
+
+    .services-gray-bar {
+        width: 100vw;
+        height: 10vw;
+        background-color: var(--gray-ui);
     }
 }
