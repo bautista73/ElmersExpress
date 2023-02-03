@@ -1,10 +1,10 @@
 @import url(/resources/styles/slider.css);
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap");
 :root {
   --light-ui: rgb(248, 248, 248);
+  --light-ui-header: rgb(235, 235, 235);
   --dark-ui: #060606;
-  --gray-ui: #a7a7a7;
+  --gray-ui: #d9d9d9;
   --med-gray-ui: rgb(95, 95, 95);
   --dark-gray-ui: rgb(68, 68, 68);
   --red-main-accent: #b31212;
@@ -19,89 +19,100 @@
 }
 
 body {
-  background-color: var(--dark-ui);
+  background-color: var(--light-ui);
   font-family: "inter", sans-serif;
 }
 
 #Header {
   width: 100%;
-  height: 2.8rem;
-  background-color: var(--yellow-accent);
+  height: 3.5rem;
+  position: fixed;
+  z-index: 3;
+  background-color: var(--dark-ui);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Header .header-logo {
+  width: 7rem;
+  height: 100%;
+  margin-right: 5rem;
 }
 #Header ul {
-  width: 60%;
+  width: 40%;
   height: 100%;
-  margin: auto;
+  margin-left: 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
-  background-color: var(--dark-ui);
-  border-radius: 0 0 12px 12px;
 }
 #Header ul li {
   color: var(--light-ui);
 }
-#Header ul li .call-us {
+#Header .call-us {
+  margin-left: 3rem;
+}
+#Header .call-us .call-us-w {
+  color: var(--light-ui);
+  padding-right: 0.5rem;
+}
+#Header .call-us .call-us-y {
   color: var(--yellow-accent);
 }
 
 #Home {
-  height: 97vh;
+  height: 100vh;
+}
+#Home .home-header-spacer {
+  height: 3.5rem;
+  width: 100%;
+  background-color: var(--yellow-accent);
 }
 #Home .home-wrapper {
   height: 100%;
 }
 #Home .home-wrapper .home-hero {
-  height: 60%;
+  height: 70%;
 }
 #Home .home-wrapper .home-nav {
-  height: 65%;
-  color: var(--light-ui);
+  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#Home .home-wrapper .home-nav .home-nav-top-wrapper {
+#Home .home-wrapper .home-nav .home-nav-jobs {
+  width: 100%;
+  height: 3rem;
+  color: var(--dark-ui);
+  background-color: var(--gray-ui);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#Home .home-wrapper .home-nav .home-nav-jobs span {
+  padding-right: 1rem;
+}
+#Home .home-wrapper .home-nav .home-nav-wrapper {
+  width: 100%;
+  margin: auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 95%;
-  margin: auto;
 }
-#Home .home-wrapper .home-nav .home-nav-top-wrapper h1 {
-  font-family: "Overpass", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 5rem;
-  letter-spacing: -4px;
+#Home .home-wrapper .home-nav .home-nav-wrapper span {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-right: 0.5rem;
 }
-#Home .home-wrapper .home-nav .home-nav-top-wrapper .nav-statement {
-  line-height: 22px;
-  width: 50%;
-}
-#Home .home-wrapper .home-nav .home-nav-bottom-wrapper {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#Home .home-wrapper .home-nav .home-nav-bottom-wrapper img {
-  width: 6.2rem;
-}
-#Home .home-wrapper .home-nav .home-nav-bottom-wrapper .nav-quote {
-  font-size: 1.3rem;
-  font-family: "Overpass", sans-serif;
-  color: var(--gray-ui);
-}
-#Home .home-wrapper .home-nav .home-nav-bottom-wrapper button {
+#Home .home-wrapper .home-nav .home-nav-wrapper button {
   transition: all 0.5s ease;
   color: var(--light-ui);
   border: 3px solid var(--yellow-accent);
   text-align: center;
-  font-weight: bold;
-  font-size: 0.8rem;
   text-transform: uppercase;
   text-decoration: none;
   background-color: transparent;
@@ -109,7 +120,7 @@ body {
   outline: none;
   border-radius: 4px;
 }
-#Home .home-wrapper .home-nav .home-nav-bottom-wrapper button:hover {
+#Home .home-wrapper .home-nav .home-nav-wrapper button:hover {
   color: var(--dark-ui);
   background-color: var(--yellow-accent);
 }
@@ -302,7 +313,7 @@ body {
   width: 95%;
   overflow: hidden;
   position: relative;
-  height: 40vh;
+  height: 45vh;
 }
 #Reviews #scrollContainer:before, #Reviews #scrollContainer:after {
   content: "";
@@ -343,22 +354,22 @@ body {
   border-radius: 15px;
   border: 2px solid var(--yellow-accent);
   padding: 20px;
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 #Reviews .scrollItem .review-block .review-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 #Reviews .scrollItem .review-block .review-header .review-title {
   font-weight: bold;
 }
 #Reviews .scrollItem .review-block .review-content {
-  text-align: left;
+  text-align: start;
   font-size: 0.85rem;
   margin-bottom: 20px;
   letter-spacing: normal;
-  word-spacing: normal;
+  word-spacing: -1px;
 }
 #Reviews .scrollItem .review-block .review-footer {
   display: flex;
@@ -385,4 +396,40 @@ body {
   to {
     transform: translateX(-100%);
   }
+}
+
+#Footer {
+  height: 50vh;
+}
+#Footer .footer-top-estimate {
+  height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--dark-ui);
+  background-color: var(--yellow-accent);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+#Footer .footer-top-estimate button {
+  transition: all 0.5s ease;
+  color: var(--dark-ui);
+  border: 3px solid var(--dark-ui);
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  outline: none;
+  border-radius: 4px;
+}
+#Footer .footer-top-estimate button:hover {
+  color: var(--dark-ui);
+  border: 3px solid var(--light-ui);
+}
+#Footer .footer-middle-info .f-middle-left img {
+  width: 4rem;
 }/*# sourceMappingURL=index.css.map */

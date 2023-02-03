@@ -78,7 +78,7 @@ li{
     cursor: pointer;
     z-index: 3;
     position: absolute;
-    height: 85%;
+    height: 55%;
     width: 5%;
     display: inline-flex;
     align-items: flex-end;
@@ -134,7 +134,7 @@ li{
   // ------------- Arrow Hovers
   
   .circleOne:hover .arrow, .circleTwo:hover .arrow {
-    color: var(--dark-blue-accent);
+    color: var(--black-main-accent);
     font-size: 1.2rem;
   }
 
