@@ -541,7 +541,7 @@ body {
   width: 85%;
   height: 54px;
   cursor: pointer;
-  border-bottom: 2px solid var(--dark-ui);
+  border-bottom: 2px solid var(--med-gray-ui);
   padding-left: 0.5rem;
   font-weight: 500;
   font-size: 1.1rem;
@@ -563,6 +563,76 @@ body {
   display: none;
   width: 90%;
   height: 90%;
-  text-align: center;
+  text-align: left;
   padding: 20px;
+}
+#_Services .serv-bottom-wrapper .showcase-container .display .display-item .display-text {
+  font-size: 1.5rem;
+}
+
+#Estimates {
+  position: relative;
+  height: 130vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Estimates .form-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 2rem solid var(--yellow-accent);
+  background-color: var(--yellow-accent);
+  width: 100%;
+  height: 30%;
+}
+#Estimates .form-header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+#Estimates .form-header p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#Estimates form {
+  width: 60%;
+  height: 80%;
+  margin-top: 1rem;
+}
+#Estimates h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+#Estimates label {
+  display: block;
+  padding: 0.5rem 0;
+}
+#Estimates input[type=text], #Estimates textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid var(--dark-ui);
+  font-size: 1.2rem;
+  background: none;
+}
+#Estimates input[type=submit] {
+  width: 100%;
+  background-color: var(--yellow-accent);
+  padding: 14px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#Estimates .required {
+  color: red;
+  font-weight: normal;
+  font-size: 12px;
 }/*# sourceMappingURL=index.css.map */
