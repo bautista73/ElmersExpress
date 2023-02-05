@@ -30,7 +30,7 @@ body {
     width: 100%;
     height: 3.5rem;
     position: fixed;
-    z-index: 3;
+    z-index: 1;
     background-color: var(--dark-ui);
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
     display: flex;
@@ -50,7 +50,15 @@ body {
         align-items: center;
         list-style: none;
         li {
-            color: var(--light-ui);  
+            color: var(--light-ui);
+            a {
+                text-decoration: none;
+                color: var(--light-ui);
+                transition: color 0.3s ease;
+                &:hover, &.active {
+                    color: var(--yellow-accent);
+                }
+            }
         }
     }
     .call-us {
@@ -62,6 +70,9 @@ body {
         .call-us-y {
             color: var(--yellow-accent);
         }
+    }
+    .active {
+        color: var(--yellow-accent);
     }
 }
 
@@ -309,8 +320,8 @@ body {
 }
 
 #Reviews {
+    position: relative;
     height: 70vh;
-    padding-top: 1rem;
     background-color: var(--light-ui);
     display: flex;
     flex-direction: column;
@@ -423,54 +434,162 @@ body {
 }
 
 #Footer {
-    height: 50vh;
-    background-color: #b31212;
-    .footer-top-block {
-        height: 10vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: var(--dark-ui);
-        background-color: var(--gray-ui);
-        font-weight: 500;
-        font-size: 1.5rem;
-        .footer-quote {
-            padding-right: 3rem;
-            font-size: 1.5rem;
-            font-weight: 600;
+    position: relative;
+    height: 28vh;
+    width: 100%;
+    background-color: var(--dark-ui);
+    color: var(--light-ui);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    line-height: 1.8rem;
+    padding: 1rem;
+    .footer-block-1 {
+        width: 30%;
+        padding: 1rem;
+        
+        .f-b-1-logo{
+            padding-bottom: .2rem;
+            img {
+                width: 6rem;
+            }
+            span {
+                font-family: 'Be Vietnam Pro', sans-serif;
+                font-weight: 800;
+                letter-spacing: -1px;
+                font-size: 2rem;
+            }
         }
-        button {
-            transition: all 0.5s ease-in-out;
-            color: var(--dark-ui);
-            border: none;
-            text-decoration: none;
-            background-color : var(--light-ui);
-            padding: 1.1rem;
-            font-size: 1.1rem;
-            font-weight: 500;
-            outline: none;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(95, 95, 95,0.45);
-            &:hover {
-                color: var(--dark-ui);
-                background-color: var(--yellow-accent);
-                box-shadow: 0 4px 13px rgba(95, 95, 95,0.5);
-                &::after {
-                    box-shadow: 0 4px 13px rgba(95, 95, 95,0.5);
-                    transition: opacity 0.4s ease-in-out;
+        .f-b-1-info {
+            span {
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+    }
+    .footer-block-2 {
+        width: 20%;
+        padding: 1rem;
+        .f-b-2-links {
+            .f-b-2-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--yellow-accent);
+            }
+            ul {
+                li {
+                font-size: 1.2rem;
+                font-weight: 400;
                 }
             }
         }
     }
-    .footer-middle-block {
-        width: 100%;
-        height: 25vh;
-        background-color: palegreen;
-        .f-middle-left {
-            img {
-                width: 6rem;
+    .footer-block-3 {
+        width: 15%;
+        padding: 1rem;
+        .f-b-3-socials {
+            .f-b-3-title {
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--yellow-accent);
+            }
+            span {
+                font-size: 1.2rem;
+                font-weight: 400;
             }
         }
     }
+    .footer-block-4 {
+        width: 25%;
+        padding: 1rem;
+        .f-b-4-legal {
+            span {
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
 
+// Services Page 
+
+#_Services {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    .serv-top-wrapper {
+        position: relative;
+        width: 100%;
+        height: 35%;
+        background-color: var(--yellow-accent);
+        .serv-banner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100%;
+            border-top: 2rem solid var(--yellow-accent);
+            span {
+                font-size: 7rem;
+                font-weight: 700;
+                letter-spacing: -3px;
+            }
+
+            p {
+                width: 60%;
+            }
+        }
+    }
+    .serv-bottom-wrapper {
+        width: 100%;
+        height: 65%;
+
+        .showcase-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+
+            .options {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .option {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 85%;
+                    height: 54px;
+                    cursor: pointer;
+                    border-bottom: 2px solid var(--dark-ui);
+                    padding-left: 0.5rem;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                    transition: background-color 0.3s ease;
+                    &:hover {
+                        background-color: var(--yellow-accent);
+                    }
+                  }
+              }
+              .display {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--gray-ui);
+                .display-item {
+                    display: none;
+                    width: 90%;
+                    height: 90%;
+                    text-align: center;
+                    padding: 20px;
+                  }
+              }
+          }
+    }
 }

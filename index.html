@@ -14,17 +14,17 @@
 <body>
     <header id="Header">
         <img class="header-logo" src="/resources/Images/Logo-Yellow-NBG.svg" alt="Elmers Express"/>
-        <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Estimates</li>
-            <li>Payments</li>
-            <li>About</li>
+        <ul class="nav-tabs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="estimates.html">Estimates</a></li>
+          <li><a href="payments.html">Payments</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
-        <div class="call-us"><span class="call-us-w">Call or Text Us</span><span class="call-us-y">1-425-791-6151</span></div>
-    </header>
+        <div class="call-us"><span class="call-us-w">Call or Text Us</span><span class="call-us-y">425-791-6151</span></div>
+      </header>
     <main>
-        <section id="Home">
+        <section id="Home" class="section">
             <div class="home-wrapper">
                 <div class="home-hero">
                     <div class="slider-container">
@@ -63,16 +63,15 @@
                         <div class="home-hiring-wrapper"><span>Elmer's Express is hiring. Apply with us today or call Elmer for information</span><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
                     </div>
                     <div class="home-button-wrapper">
-                        <!-- <span>Quick Resources:</span> -->
                         <button><span>Request an Estimate <i class="fa-solid fa-square-up-right"></i></span></button>
-                        <button><span>Make a PayPal Payment <i class="fa-solid fa-square-up-right"></i></span></button>
+                        <button onclick="paypalLink()"><span>Make a PayPal Payment <i class="fa-solid fa-square-up-right"></i></span></button>
                         <button><span>Send Us an Email <i class="fa-solid fa-square-up-right"></i></span></button>
                         <button><span>Job Applicant Form <i class="fa-solid fa-square-up-right"></i></span></button>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="Services">
+        <section id="Services" class="section">
             <div class="services-top-wrapper">
                 <h2>Full Service Movers</h2>
                 <hr>
@@ -110,10 +109,10 @@
                 </div>
             </div>
             <div class="services-button-wrapper">
-                <button><span>See All Services <i class="fa-solid fa-square-up-right"></i></span></button>
+                <button onclick="servicesLink()"><span>See All Services <i class="fa-solid fa-square-up-right"></i></span></button>
             </div>
         </section>
-        <section id="Mission">
+        <section id="Mission" class="section">
             <div class="mission-left-block">
                 <h2>Our Mission</h2>
                 <hr>
@@ -134,8 +133,7 @@
                 <iframe width="645" height="375" src="https://www.youtube.com/embed/bEwNLrAk1Ww" title="Elmer's Express Delivery video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
-        <!-- <section id="Reviews">
-            <span>REVIEWS</span>
+        <section id="Reviews" class="section">
             <h2>Our Clients Say</h2>
             <hr>
             <div id="scrollContainer"> 
@@ -352,24 +350,48 @@
                   </div>
                 </div>
               </div>
-        </section> -->
+        </section>
     </main>
-    <footer id="Footer">
-        <div class="footer-top-block">
-            <span class="footer-quote"><em>"Going the extra mile with a smile"</em></span>
-            <button><span>Request an Estimate <i class="fa-solid fa-square-up-right"></i></button>
-        </div>
-        <div class="footer-middle-block">
-            <div class="f-middle-left">
-                <img src="/resources/Images/Logo-Yellow-NBG.svg" alt="Elmer's Express Cheetah"/>
+    <footer id="Footer" class="section">
+        <div class="footer-block-1">
+            <div class="f-b-1-logo">
+                <img src="/resources/Images/Logo-Yellow-NBG.svg" alt=" " />
+                <span>Elmer's Express</span>
             </div>
-            <div class="f-middle-middle"></div>
-            <div class="f-middle-right"></div>
+            <div class="f-b-1-info">
+                <span>elmer@elmersexpress.com</span><br>
+                <span>425-791-6151</span>
+            </div>
         </div>
-        <div class="footer-bottom-block">
-            
+        <div class="footer-block-2">
+            <div class="f-b-2-links">
+                <span class="f-b-2-title">Quick Links</span>
+                <ul>
+                    <li>Contact</li>
+                    <li>Estimate Form</li>
+                    <li>PayPal Payment</li>
+                    <li>Job Openings</li>
+                    <li>Consumer Guide</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-block-3">
+            <div class="f-b-3-socials">
+                <span class="f-b-3-title">Find Us On</span><br>
+                <span>Facebook</span><br>
+                <span>Yelp</span>
+            </div>
+        </div>
+        <div class="footer-block-4">
+            <div class="f-b-4-legal">
+                <span>Elmers Express, LLC</span><br>
+                <span>WUTC Permit No. HG063928</span><br>
+                <span>Marysville, WA 98270</span><br>
+                <span>Warehouse Location: Woodinville, WA</span>
+            </div>
         </div>
     </footer>
+    <script src="/resources/js/index.js"></script>
     <script src="/resources/js/slider.js"></script>
 </body>
 </html>
