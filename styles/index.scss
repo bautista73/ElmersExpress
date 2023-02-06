@@ -1,7 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy:wght@700&display=swap');
 
 $base-light: rgb(248, 248, 248);
 $base-dark: #060606;
 $accent-yellow: rgb(250, 183, 28);
-$accent-gray: rgb(95, 95, 95);
+$accent-orange: rgb(228, 143, 16);
+$accent-gray: rgb(65, 65, 65);
+$accent-light-gray: rgb(239, 239, 236);
 
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $base-light;
+    color: $base-dark;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+#Header {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 1rem 0;
+    .header-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .nav-logo {
+            height: auto;
+            max-width: 10rem;
+        }
+        .nav-tabs {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                font-size: 1rem;
+                padding: 0 1rem;
+                a {
+                    position: relative;
+                    color: $accent-gray;
+                    text-decoration: none;
+                    &:after,::before {
+                        transition: all .5s;
+                    }
+                    &:hover {
+                        color: $base-dark;
+                    }
+                    &:after {
+                        position: absolute;
+                        bottom: -3.5px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 0%;
+                        content: '.';
+                        color: transparent;
+                        background: $accent-yellow;
+                        height: 2px;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .nav-button {
+            font-size: 1rem;
+            padding: 0.90rem;
+            border-radius: 25px;
+            border: 2px solid $accent-yellow;
+            background: none;
+            transition: background-color 0.5s ease;
+            &:hover {
+                background-color: $accent-yellow;
+            }
+        }
+
+    }
+}
+
+#Home {
+    position: relative;
+    .home-hire-banner {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        text-align: center;
+        background-color: $accent-light-gray;
+        font-size: 1rem;
+        padding: 1rem 0;
+        .hire-banner-apply {
+            color: $accent-orange;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    .home-hero {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 1rem;
+        grid-template-rows: repeat(auto-fit, minmax(600px, 1fr));
+        .home-hero-leftBlock {
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 3rem;
+            line-height: 2rem;
+            .home-hero-brand {
+                font-family: 'Kantumruy', sans-serif;
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: $accent-orange;
+            }
+            h1 {
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+            p {
+                font-weight: 500;
+            }
+            .home-hero-button {
+                margin-top: 1rem;
+                font-size: 1rem;
+                padding: 0.90rem;
+                border-radius: 25px;
+                border: 2px solid $accent-yellow;
+                font-weight: 600;
+                background-color: $accent-yellow;
+                transition: background-color 0.5s ease;
+                &:hover {
+                    background-color: $base-light;
+                }
+            }
+        }
+        .home-hero-rightBlock {
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                height: auto;
+                width: auto;
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+#Services {
+    position: relative;
+
+}
