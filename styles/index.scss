@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy:wght@700&display=swap');
 
-$base-light: rgb(248, 248, 248);
+$base-light: #f8f8f8;
 $base-dark: #060606;
-$accent-yellow: rgb(250, 183, 28);
+$accent-yellow: #FFD00F;
 $accent-orange: rgb(228, 143, 16);
+$accent-dark-gray: rgb(49, 49, 49);
 $accent-gray: rgb(65, 65, 65);
 $accent-light-gray: rgb(239, 239, 236);
 
@@ -86,6 +87,7 @@ body {
 
 #Home {
     position: relative;
+    background: linear-gradient(120deg, #f8f8f8 0%,#f8f8f8 50%,#ffd00f 50%,#ffd00f 100%);
     .home-hire-banner {
         display: grid;
         align-items: center;
@@ -103,13 +105,13 @@ body {
     .home-hero {
         display: grid;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        grid-gap: 1rem;
-        grid-template-rows: repeat(auto-fit, minmax(600px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
         .home-hero-leftBlock {
             margin: auto;
             height: 100%;
             width: 100%;
+            max-width: 700px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -151,9 +153,10 @@ body {
             align-items: center;
             justify-content: flex-start;
             img {
+                padding-left: 2rem;
                 height: auto;
                 width: auto;
-                max-width: 800px;
+                max-width: 650px;
             }
         }
     }
@@ -161,5 +164,113 @@ body {
 
 #Services {
     position: relative;
+    margin: auto;
+    max-width: 100rem;
+    .services-header-row {
+        padding-top: 1rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        text-align: center;
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+    
+    .services-top-row {
+        padding: 2rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 3rem;
+    }
+    .services-bottom-row {
+        padding: 2rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 3rem;
+    }
 
+    .service-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1rem;
+        height: 100%;
+        max-width: 28rem;
+        background-color: $accent-light-gray;
+        .services-icons {
+            background-color: $accent-yellow;
+            border: 2px solid $base-dark;
+            border-radius: 12px;
+            padding: 0.5rem;
+            width: 5.5rem;
+        }
+        .icon-h {
+            text-align: center;
+            padding: 0.5rem;
+            color: $accent-dark-gray;
+        }
+        .icon-p {
+            max-width: 25rem;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: $accent-gray;
+        }
+        .icon-p-2 {
+            max-width: 25rem;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: $accent-gray;
+        }
+    }
+
+    .service-block-spacer {
+        background: none;
+    }
+}
+
+#About {
+    position: relative;
+    background-color: $accent-light-gray;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
+    .about-leftBlock {
+        margin: 2rem;
+        iframe {
+            border: 1px solid $base-dark;
+        }
+
+    }
+    .about-rightBlock {
+        padding: 2rem;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        h3 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 2rem;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                padding-right: 2.5rem;
+                font-weight: 500;
+                color: $accent-orange;
+            }
+        }
+    }
 }
