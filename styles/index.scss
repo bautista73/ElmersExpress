@@ -149,11 +149,11 @@ body {
             width: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             img {
                 height: auto;
                 width: auto;
-                max-width: 600px;
+                max-width: 800px;
             }
         }
     }
