@@ -89,7 +89,7 @@ body {
   padding: 1rem 0;
 }
 #Home .home-hire-banner .hire-banner-apply {
-  color: rgb(228, 143, 16);
+  color: #e48f10;
   text-decoration: none;
   cursor: pointer;
 }
@@ -115,7 +115,7 @@ body {
   font-family: "Kantumruy", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
-  color: rgb(228, 143, 16);
+  color: #e48f10;
 }
 #Home .home-hero .home-hero-leftBlock h1 {
   font-size: 2rem;
@@ -201,7 +201,7 @@ body {
 #Services .service-block .icon-h {
   text-align: center;
   padding: 0.5rem;
-  color: rgb(49, 49, 49);
+  color: #313131;
 }
 #Services .service-block .icon-p {
   max-width: 25rem;
@@ -258,5 +258,71 @@ body {
 #About .about-rightBlock ul li {
   padding-right: 2.5rem;
   font-weight: 500;
-  color: rgb(228, 143, 16);
+  color: #e48f10;
+}
+
+#Reviews .reviews-Block .review-top-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 4rem;
+  height: 85%;
+  background-color: #FFD00F;
+}
+#Reviews .reviews-Block .review-top-wrapper img {
+  width: 3rem;
+  filter: invert(16%) sepia(0%) saturate(1%) hue-rotate(339deg) brightness(99%) contrast(90%);
+}
+#Reviews .reviews-Block .review-top-wrapper p {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  color: #060606;
+}
+#Reviews .reviews-Block .review-top-wrapper span {
+  line-height: 3rem;
+  font-size: 1.1rem;
+  color: #313131;
+}
+#Reviews .reviews-Block .review-top-wrapper .review-stars i {
+  font-size: 1.5rem;
+}
+#Reviews .reviews-Block .reviews-bottom-wrapper {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ffd00f 0%, #ffd00f 55%, #ffd00f 55%, #f8f8f8 55%, #f8f8f8 55%, #f8f8f8 100%);
+}
+#Reviews .reviews-Block .reviews-bottom-wrapper .review-block {
+  width: 24rem;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  border: 2px solid var(--yellow-accent);
+  padding: 20px;
+  margin: 20px 10px 10px 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+#Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-header .review-title {
+  font-weight: bold;
+}
+#Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-content {
+  text-align: start;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  word-spacing: -1px;
+}
+#Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: gray;
+}
+#Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-footer .reviewer-name {
+  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */

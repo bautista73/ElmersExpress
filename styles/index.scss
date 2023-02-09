@@ -3,8 +3,8 @@
 $base-light: #f8f8f8;
 $base-dark: #060606;
 $accent-yellow: #FFD00F;
-$accent-orange: rgb(228, 143, 16);
-$accent-dark-gray: rgb(49, 49, 49);
+$accent-orange: #e48f10;
+$accent-dark-gray: #313131;
 $accent-gray: rgb(65, 65, 65);
 $accent-light-gray: rgb(239, 239, 236);
 
@@ -270,6 +270,84 @@ body {
                 padding-right: 2.5rem;
                 font-weight: 500;
                 color: $accent-orange;
+            }
+        }
+    }
+}
+
+#Reviews {
+    .reviews-Block {
+        
+        .review-top-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            padding: 4rem;
+            height: 85%;
+            background-color: $accent-yellow;
+            img {
+                width: 3rem;
+                filter: invert(16%) sepia(0%) saturate(1%) hue-rotate(339deg) brightness(99%) contrast(90%);
+            }
+            p {
+                font-size: 1.2rem;
+                line-height: 2.5rem;
+                color: $base-dark;
+            }
+            span {
+                line-height: 3rem;
+                font-size: 1.1rem;
+                color: $accent-dark-gray;
+            }
+            .review-stars {
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .reviews-bottom-wrapper {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(to bottom, #ffd00f 0%,#ffd00f 55%,#ffd00f 55%,#f8f8f8 55%,#f8f8f8 55%,#f8f8f8 100%);
+            .review-block {
+                width: 24rem;
+                background-color: #f5f5f5;
+                border-radius: 15px;
+                border: 2px solid var(--yellow-accent);
+                padding: 20px;
+                margin: 20px 10px 10px 10px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+              
+                .review-header {
+                  text-align: center;
+                  margin-bottom: 10px;
+              
+                  .review-title {
+                    font-weight: bold;
+                  }
+                }
+              
+                .review-content {
+                  text-align: start;
+                  font-size: 0.85rem;
+                  margin-bottom: 20px;
+                  letter-spacing: normal;
+                  word-spacing: -1px;
+                }
+              
+                .review-footer {
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 20px;
+                  font-size: 0.8em;
+                  color: gray;
+              
+                  .reviewer-name {
+                    font-weight: bold;
+                  }
+                }
             }
         }
     }
