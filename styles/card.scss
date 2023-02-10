@@ -1,3 +1,11 @@
+$base-light: #f8f8f8;
+$base-dark: #060606;
+$accent-yellow: #FFD00F;
+$accent-orange: #e48f10;
+$accent-dark-gray: #313131;
+$accent-gray: rgb(65, 65, 65);
+$accent-light-gray: rgb(239, 239, 236);
+
 body {
   text-rendering: optimizeLegibility;
 }
@@ -29,17 +37,18 @@ a.btn:active {
   transition: all 0.025s 0s ease-out;
 }
 
-div.cards {
+.cards {
   margin: 80px auto;
   max-width: 960px;
   text-align: center;
 }
 
-div.card {
-  background: #fff;
+.card {
+  background: $accent-light-gray;
   display: inline-block;
   margin: 8px;
   max-width: 300px;
+  height: 10rem;
   perspective: 1000;
   position: relative;
   text-align: left;
@@ -48,17 +57,24 @@ div.card {
   z-index: 1;
 
   img {
-    max-width: 300px;
+    background-color: $accent-yellow;
+    border: 2px solid $base-dark;
+    border-radius: 12px;
+    padding: 0.5rem;
+    width: 5.5rem;
   }
   
   .card__image-holder {
-    background: rgba(0,0,0,0.1);
-    height: 0;
-    padding-bottom: 75%;
+    background-color: $accent-yellow;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  div.card-title {
-    background: #fff;
+  .card-title {
+    background: $accent-light-gray;
     padding: 6px 15px 10px;
     position: relative;
     z-index: 0;
@@ -73,7 +89,7 @@ div.card {
       width: 32px;
       
       span {
-        background: #fff;
+        background: $accent-light-gray;
         display: block;
         height: 2px;
         position: absolute;
@@ -108,56 +124,56 @@ div.card {
     }
   }
 
-  div.card-description {
+  .card-description {
     padding: 0 15px 10px;
     position: relative;
     font-size: 14px;
   }
 
-  div.card-actions {
+  .card-actions {
   	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
     padding: 10px 15px 20px;
     text-align: center;
   }
   
-  div.card-flap {
-    background: darken(#fff,15);
+  .card-flap {
+    background: $accent-light-gray;
     position: absolute;
     width: 100%;
     transform-origin: top;
     transform: rotateX(-90deg);
   }
-  div.flap1 {
+  .flap1 {
     transition: all 0.3s 0.3s ease-out;
     z-index: -1;
   }
-  div.flap2 {
+  .flap2 {
     transition: all 0.3s 0s ease-out;
     z-index: -2;
   }
   
 }
 
-div.cards.showing {
-  div.card {
+.cards.showing {
+  .card {
     cursor: pointer;
     opacity: 0.6;
     transform: scale(0.88);
   }
 }
 
-.no-touch  div.cards.showing {
-  div.card:hover {
+.no-touch .cards.showing {
+  .card:hover {
     opacity: 0.94;
     transform: scale(0.92);
   }
 }
 
-div.card.show {
+.card.show {
   opacity: 1 !important;
   transform: scale(1) !important;
 
-  div.card-title {
+  .card-title {
     a.toggle-info {
       background: #999 !important;
       span {
@@ -171,14 +187,14 @@ div.card.show {
       }
     }
   }
-  div.card-flap {
-    background: #fff;
+  .card-flap {
+    background: $accent-light-gray;
     transform: rotateX(0deg);
   }
-  div.flap1 {
+  .flap1 {
     transition: all 0.3s 0s ease-out;
   }
-  div.flap2 {
+  .flap2 {
     transition: all 0.3s 0.2s ease-out;
   }
 }
