@@ -228,6 +228,13 @@ body {
             font-size: 0.9rem;
             color: $accent-gray;
         }
+        .card-flap {
+            background: $accent-light-gray;
+            transform: rotateX(0deg);
+          }
+          .flap1 {
+            transition: all 0.3s 0s ease-out;
+          }
     }
 
     .service-block-spacer {

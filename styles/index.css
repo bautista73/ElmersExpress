@@ -218,6 +218,13 @@ body {
   font-size: 0.9rem;
   color: rgb(65, 65, 65);
 }
+#Services .service-block .card-flap {
+  background: rgb(239, 239, 236);
+  transform: rotateX(0deg);
+}
+#Services .service-block .flap1 {
+  transition: all 0.3s 0s ease-out;
+}
 #Services .service-block-spacer {
   background: none;
 }
