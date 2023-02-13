@@ -118,7 +118,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   padding: 3rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
 #Home .home-hero .home-hero-leftBlock .home-hero-brand {
   font-family: "Kantumruy", sans-serif;
@@ -134,19 +134,6 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   color: rgb(65, 65, 65);
-}
-#Home .home-hero .home-hero-leftBlock .home-hero-button {
-  margin-top: 1rem;
-  font-size: 1rem;
-  padding: 0.9rem;
-  border-radius: 25px;
-  border: 2px solid #FFD00F;
-  font-weight: 600;
-  background-color: #FFD00F;
-  transition: background-color 0.5s ease;
-}
-#Home .home-hero .home-hero-leftBlock .home-hero-button:hover {
-  background-color: #f8f8f8;
 }
 #Home .home-hero .home-hero-rightBlock {
   margin: auto;
@@ -165,6 +152,48 @@ body {
   width: auto;
   max-width: 600px;
 }
+#Home .home-quick-links {
+  padding: 30px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+#Home .home-quick-links button {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: auto;
+  width: 95%;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(239, 239, 236);
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+#Home .home-quick-links button:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+#Home .home-quick-links button .fa-paypal, #Home .home-quick-links button .fa-file-lines, #Home .home-quick-links button .fa-phone {
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+#Home .home-quick-links button .fa-paypal {
+  color: #3b7bbf;
+}
+#Home .home-quick-links button .fa-file-lines {
+  color: #060606;
+}
+#Home .home-quick-links button .fa-phone {
+  color: #e48f10;
+}
 
 #Services {
   max-width: 1920px;
@@ -174,7 +203,7 @@ body {
   margin: auto;
 }
 #Services .header {
-  padding: 30px 30px 0;
+  padding: 15px;
   text-align: center;
 }
 #Services .header__title {
@@ -420,6 +449,10 @@ body {
   padding: 20px;
   margin: 20px 10px 10px 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 #Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-header {
   text-align: center;
@@ -434,12 +467,15 @@ body {
   margin-bottom: 20px;
   letter-spacing: normal;
   word-spacing: -1px;
+  line-height: 1.3rem;
 }
 #Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-footer {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  font-size: 0.8em;
+  font-size: 1rem;
+  width: 95%;
+  margin: auto;
   color: gray;
 }
 #Reviews .reviews-Block .reviews-bottom-wrapper .review-block .review-footer .reviewer-name {
@@ -542,6 +578,13 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+#Footer .site-footer .container {
+  background-color: rgb(239, 239, 236);
+  padding: 5rem 0;
+  width: 95%;
+  margin: auto;
+  border-radius: 20px;
+}
 #Footer .site-footer .container hr {
   margin: auto auto 3rem auto;
   width: 95%;
@@ -605,10 +648,13 @@ body {
   width: 95%;
 }
 #Footer .site-footer .container-2 .row .block-end {
-  padding: 0.5rem 5rem;
+  padding: 0.75rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 95%;
+  margin: 0.75rem auto;
+  border-radius: 20px 20px 0 0;
 }
 #Footer .site-footer .container-2 .row .block-end .block-end-info-wrapper {
   display: flex;
@@ -626,8 +672,8 @@ body {
   padding: 0 0.5rem;
 }
 #Footer .site-footer .container-2 .row .block-end .social-icons-block .social-icons li a {
-  background-color: #818a91;
-  color: #eceeef;
+  background-color: #313131;
+  color: #f8f8f8;
   font-size: 16px;
   display: inline-block;
   line-height: 44px;
