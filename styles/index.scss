@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy:wght@700&display=swap');
-@import url('/styles/card.css');
+@import url('/styles/servicecards.css');
 
 $base-light: #f8f8f8;
 $base-dark: #060606;
@@ -164,82 +164,211 @@ body {
 }
 
 #Services {
-    position: relative;
-    margin: auto;
-    max-width: 100rem;
-    .services-header-row {
-        padding-top: 1rem;
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    .wrapper {
+        margin: auto;
+      }
+      
+      .header {
+        padding: 30px 30px 0;
         text-align: center;
-        h3 {
-            font-size: 1.5rem;
+      
+        &__title {
+          margin: 0;
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1.1;
+          font-family: 'inter', sans-serif;
         }
-    }
-    
-    .services-top-row {
-        padding: 2rem;
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 3rem;
-    }
-    .services-bottom-row {
-        padding: 2rem;
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 3rem;
-    }
-
-    .service-block {
+      }
+      
+      //Grid Container
+      .cards {
+        padding: 20px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 1rem;
-        height: 100%;
-        max-width: 28rem;
-        background-color: $accent-light-gray;
-        .services-icons {
-            background-color: $accent-yellow;
-            border: 2px solid $base-dark;
-            border-radius: 12px;
-            padding: 0.5rem;
+        flex-flow: row wrap;
+      }
+      
+      //Cards
+      .card {
+        margin: 15px; 
+        width: calc((100% / 3) - 30px);
+        transition: all 0.2s ease-in-out;
+      
+        //media queries for stacking cards
+        @media screen and (max-width: 991px) {
+          width: calc((100% / 2) - 30px);
+        }
+      
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      
+        &:hover {
+          .card__inner {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          }
+        }
+      
+        &__inner {
+          width: 100%;
+          padding: 70px;
+          position: relative;
+          cursor: pointer;
+          
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+    
+          background-color: #f2f2f2;
+          color: #333;
+          font-size: 1.3rem;
+          font-weight: 700;
+    
+          text-align: center;
+      
+          transition: all 0.2s ease-in-out;
+    
+          .service-icon-img {
             width: 5.5rem;
-        }
-        .icon-h {
-            text-align: center;
-            padding: 0.5rem;
-            color: $accent-dark-gray;
-        }
-        .icon-p {
-            max-width: 25rem;
-            line-height: 1.5rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: $accent-gray;
-        }
-        .icon-p-2 {
-            max-width: 25rem;
-            line-height: 1.5rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: $accent-gray;
-        }
-        .card-flap {
-            background: $accent-light-gray;
-            transform: rotateX(0deg);
           }
-          .flap1 {
-            transition: all 0.3s 0s ease-out;
+          .see-more {
+            font-size: 1rem;
+            color: $accent-orange;
+            padding-top: 1rem;
           }
-    }
-
-    .service-block-spacer {
-        background: none;
-    }
+    
+          .span-wrapper {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          &:after {
+            transition: all 0.3s ease-in-out;
+          }
+          
+          .fa {
+            width: 100%;
+            margin-top: .25em;
+          }
+        }
+      
+        //Expander
+        &__expander {
+          transition: all 0.2s ease-in-out;
+          background-color: #f2f2f2;
+          width: 100%;
+          position: relative;
+          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          text-transform: uppercase;
+          color: $base-dark;
+          font-size: 1.5em;
+          
+          .fa {
+            font-size: 0.75em;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+      
+        &.is-collapsed {
+          
+          .card__inner {
+            &:after {
+    
+              opacity: 0;
+            }
+          }
+          .card__expander {
+            max-height: 0;
+            min-height: 0;
+            overflow: hidden;
+            margin-top: 0;
+            opacity: 0;
+          }
+        }
+      
+        &.is-expanded {
+      
+          .card__inner {
+            background-color: turquoise;
+          }
+      
+          .card__expander {
+            max-height: 1000px;
+            min-height: 200px;
+            overflow: visible;
+            margin-top: 30px;
+            opacity: 1;
+          }
+      
+          &:hover {
+            .card__inner {
+              transform: scale(1);
+            }
+          }
+        }
+        
+        &.is-inactive {
+          .card__inner {
+            pointer-events: none;
+            opacity: 0.5;
+          }
+          
+          &:hover {
+            .card__inner {
+              background-color: gray;
+              transform: scale(1);
+            }
+          }
+        }
+      }
+      
+      
+      //Expander Widths
+      
+      //when 3 cards in a row
+      @media screen and (min-width: 992px) {
+      
+        .card:nth-of-type(3n+2) .card__expander {
+          margin-left: calc(-100% - 30px);
+        }
+        .card:nth-of-type(3n+3) .card__expander {
+          margin-left: calc(-200% - 60px);
+        }
+        .card:nth-of-type(3n+4) {
+          clear: left;
+        }
+        .card__expander {
+          width: calc(300% + 60px);
+        }
+      
+      }
+      
+      //when 2 cards in a row
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+      
+        .card:nth-of-type(2n+2) .card__expander {
+          margin-left: calc(-100% - 30px);
+        }
+        .card:nth-of-type(2n+3) {
+          clear: left;
+        }
+        .card__expander {
+          width: calc(200% + 30px);
+        }
+      
+      }
 }
 
 #About {
