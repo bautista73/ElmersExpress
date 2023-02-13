@@ -181,20 +181,17 @@ body {
         }
       }
       
-      //Grid Container
       .cards {
         padding: 20px;
         display: flex;
         flex-flow: row wrap;
       }
-      
-      //Cards
+
       .card {
         margin: 15px; 
         width: calc((100% / 3) - 30px);
         transition: all 0.2s ease-in-out;
       
-        //media queries for stacking cards
         @media screen and (max-width: 991px) {
           width: calc((100% / 2) - 30px);
         }
@@ -212,7 +209,7 @@ body {
       
         &__inner {
           width: 100%;
-          padding: 70px;
+          padding: 80px;
           position: relative;
           cursor: pointer;
           
@@ -220,7 +217,7 @@ body {
           align-items: center;
           justify-content: space-around;
     
-          background-color: #f2f2f2;
+          background-color: $accent-light-gray;
           color: #333;
           font-size: 1.3rem;
           font-weight: 700;
@@ -232,6 +229,7 @@ body {
           .service-icon-img {
             width: 5.5rem;
           }
+
           .see-more {
             font-size: 1rem;
             color: $accent-orange;
@@ -252,40 +250,27 @@ body {
             margin-top: .25em;
           }
         }
-      
-        //Expander
+
         &__expander {
           transition: all 0.2s ease-in-out;
-          background-color: #f2f2f2;
+          background-color: $accent-light-gray;
           width: 100%;
           position: relative;
           
           display: flex;
           justify-content: center;
           align-items: center;
-          
-          text-transform: uppercase;
+        
           color: $base-dark;
-          font-size: 1.5em;
-          
-          .fa {
-            font-size: 0.75em;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            
-            &:hover {
-              opacity: 0.9;
-            }
-          }
+          font-size: 1.4em;
+          text-align: center;
+          line-height: 2.5rem;
         }
       
         &.is-collapsed {
           
           .card__inner {
             &:after {
-    
               opacity: 0;
             }
           }
@@ -301,7 +286,7 @@ body {
         &.is-expanded {
       
           .card__inner {
-            background-color: turquoise;
+            background-color: $accent-yellow;
           }
       
           .card__expander {
@@ -327,17 +312,13 @@ body {
           
           &:hover {
             .card__inner {
-              background-color: gray;
+              background-color: $accent-yellow;
               transform: scale(1);
             }
           }
         }
       }
       
-      
-      //Expander Widths
-      
-      //when 3 cards in a row
       @media screen and (min-width: 992px) {
       
         .card:nth-of-type(3n+2) .card__expander {
@@ -354,8 +335,7 @@ body {
         }
       
       }
-      
-      //when 2 cards in a row
+
       @media screen and (min-width: 768px) and (max-width: 991px) {
       
         .card:nth-of-type(2n+2) .card__expander {
@@ -484,6 +464,130 @@ body {
                   .reviewer-name {
                     font-weight: bold;
                   }
+                }
+            }
+        }
+    }
+}
+
+#Footer {
+    padding-top: 5rem;
+    height: 30rem;
+    .site-footer {
+        font-size:15px;
+        line-height:24px;
+        color:$accent-dark-gray;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .container {
+            .row {
+                display: flex;
+                justify-content: space-evenly;
+                .block-1 {
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 2.5rem;
+                    .block-1-title {
+                        font-size: 2rem;
+                        font-weight: 700;
+                    }
+
+                    .block-1-number {
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        color: $accent-gray;
+                    }
+                    .block-1-button {
+                        width: 50%;
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                        padding: 0.90rem;
+                        border-radius: 25px;
+                        border: 2px solid $accent-yellow;
+                        font-weight: 600;
+                        background-color: $accent-yellow;
+                        transition: background-color 0.5s ease;
+                        &:hover {
+                            background-color: $base-light;
+                        }
+                    }
+                }
+                .block-wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    .block-2, .block-3, .block-4 {
+                        line-height: 2rem;
+                        padding: 0 1rem;
+                        h6 {
+                            color: $accent-orange;
+                            font-size: 1.2rem;
+                        }
+                        ul {
+                            list-style: none;
+                            li {
+                                a {
+                                    color: $accent-gray;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .container-2 {
+        
+            .row {
+                
+                .block-end {
+                    padding: 0.5rem 5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .block-end-info-wrapper {
+                        display: flex;
+                        align-items: center;
+                        img {
+                            width: 8rem;
+                            padding-right: 1.5rem;
+                        }
+                    }
+
+                    .social-icons-block {
+                        .social-icons {
+                            list-style: none;
+                            display: flex;
+                            li {
+                                padding: 0 0.5rem;
+
+                                & a{
+                                    background-color:#818a91;
+                                    color:#eceeef;
+                                    font-size:16px;
+                                    display:inline-block;
+                                    line-height:44px;
+                                    width:44px;
+                                    height:44px;
+                                    text-align:center;
+                                    margin-right:8px;
+                                    border-radius:100%;
+                                    -webkit-transition:all .2s linear;
+                                    -o-transition:all .2s linear;
+                                    transition:all .2s linear;
+                                    
+                                    &.facebook:hover {
+                                      background-color:#3b5998
+                                    }
+                                    &.yelp:hover {
+                                        background-color:#c41200;
+                                    }
+                                  }
+
+                            }
+                        }
+                    }
                 }
             }
         }
