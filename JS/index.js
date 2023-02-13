@@ -1,4 +1,5 @@
 // Service box JS
+
 const cells = document.querySelectorAll('.card');
 
 document.addEventListener("click", function(event) {
