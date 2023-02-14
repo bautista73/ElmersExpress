@@ -1,4 +1,13 @@
-// Service box JS
+// Hamburger Menu JS
+
+var hamburgerMenu = document.querySelector('.hamburger-menu');
+var headerNav = document.querySelector('.header-nav');
+
+hamburgerMenu.addEventListener('click', function() {
+  headerNav.classList.toggle('menu-open');
+});
+
+// Service Box JS
 
 const cells = document.querySelectorAll('.card');
 
