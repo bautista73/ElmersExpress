@@ -123,15 +123,15 @@ body {
 #Home .home-hero .home-hero-leftBlock .home-hero-brand {
   font-family: "Kantumruy", sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #e48f10;
 }
 #Home .home-hero .home-hero-leftBlock h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   line-height: 3rem;
 }
 #Home .home-hero .home-hero-leftBlock p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: rgb(65, 65, 65);
 }
@@ -143,14 +143,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFD00F;
-  border-radius: 20px;
 }
 #Home .home-hero .home-hero-rightBlock img {
-  padding: 1rem;
   height: auto;
   width: auto;
-  max-width: 600px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+@media screen and (max-width: 800px) {
+  #Home .home-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 #Home .home-quick-links {
   padding: 30px;
@@ -170,29 +175,43 @@ body {
   position: relative;
   border-radius: 20px;
   border: none;
-  background-color: rgb(239, 239, 236);
-  color: #333;
-  font-size: 1.3rem;
-  font-weight: 700;
+  color: #f8f8f8;
+  font-size: 1.5rem;
+  font-weight: 600;
   cursor: pointer;
 }
+#Home .home-quick-links button:nth-child(1) {
+  background-color: #313131;
+}
+#Home .home-quick-links button:nth-child(2) {
+  background-color: #3b7bbf;
+}
+#Home .home-quick-links button:nth-child(3) {
+  background-color: #e48f10;
+}
 #Home .home-quick-links button:hover {
-  background-color: #f8f8f8;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 #Home .home-quick-links button .fa-paypal, #Home .home-quick-links button .fa-file-lines, #Home .home-quick-links button .fa-phone {
   padding-right: 1rem;
   font-size: 1.5rem;
 }
 #Home .home-quick-links button .fa-paypal {
-  color: #3b7bbf;
+  color: #f8f8f8;
 }
 #Home .home-quick-links button .fa-file-lines {
-  color: #060606;
+  color: #f8f8f8;
 }
 #Home .home-quick-links button .fa-phone {
-  color: #e48f10;
+  color: #f8f8f8;
+}
+@media screen and (max-width: 800px) {
+  #Home .home-quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 #Services {
@@ -203,7 +222,7 @@ body {
   margin: auto;
 }
 #Services .header {
-  padding: 15px;
+  padding: 20px;
   text-align: center;
 }
 #Services .header__title {
@@ -222,6 +241,11 @@ body {
   margin: 15px;
   width: calc(33.3333333333% - 30px);
   transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 1366px) {
+  #Services .card {
+    width: calc(50% - 30px);
+  }
 }
 @media screen and (max-width: 991px) {
   #Services .card {
@@ -283,11 +307,11 @@ body {
   border-radius: 20px;
   color: #060606;
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   line-height: 2.5rem;
 }
 #Services .card__expander p {
-  padding: 2rem;
+  padding: 4rem;
 }
 #Services .card.is-collapsed .card__inner:after {
   opacity: 0;
