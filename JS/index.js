@@ -1,12 +1,3 @@
-// Hamburger Menu JS
-
-var hamburgerMenu = document.querySelector('.hamburger-menu');
-var headerNav = document.querySelector('.header-nav');
-
-hamburgerMenu.addEventListener('click', function() {
-  headerNav.classList.toggle('menu-open');
-});
-
 // Service Box JS
 
 const cells = document.querySelectorAll('.card');
@@ -58,6 +49,20 @@ cells.forEach(cell => {
     });
   });
 });
+
+
+// FAB event listener JS 
+const container = document.querySelector('.container');
+const checkbox = document.getElementById('toggle');
+
+document.addEventListener('click', function(event) {
+  const isClickInsideContainer = container.contains(event.target);
+  if (!isClickInsideContainer) {
+    checkbox.checked = true;
+  }
+});
+
+
 
   
 

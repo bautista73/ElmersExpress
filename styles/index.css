@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Kantumruy:wght@700&display=swap");
 @import url("/styles/servicecards.css");
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 48;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -637,7 +641,7 @@ body {
 }
 #CTA .cta-rightBlock .cta-p {
   font-size: 1.1rem;
-  color: #313131;
+  color: rgb(65, 65, 65);
 }
 #CTA .cta-rightBlock .cta-button-wrapper {
   display: flex;
@@ -685,106 +689,133 @@ body {
   }
 }
 
-.container {
-  width: 21%;
+#FAB .container {
+  width: 20%;
+  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 50%;
-  left: 55%;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 1;
+  pointer-events: none;
 }
-.container #toggle {
+#FAB .container #toggle {
+  -moz-appearance: none;
+       appearance: none;
   -webkit-appearance: none;
 }
-.container .button {
+#FAB .container .button {
   position: absolute;
-  z-index: 999;
+  z-index: 1;
   width: 50px;
   height: 50px;
-  background: #e48f10;
+  background: rgba(227, 13, 13, 0.55);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   border-radius: 100%;
   cursor: pointer;
+  pointer-events: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 50%;
-  left: 102%;
+  bottom: -2rem;
+  right: -2rem;
+  transition: background 0.2s ease-in-out;
 }
-.container .button:before {
+#FAB .container .button:hover {
+  background: #e30d0d;
+}
+#FAB .container .button:before {
   position: absolute;
   content: "";
   width: 20px;
   height: 2px;
   background: #f8f8f8;
-  transform: rotate(90deg);
+  transform: rotate(225deg);
   transition: all 0.4s ease;
 }
-.container .button:after {
+#FAB .container .button:after {
   position: absolute;
   content: "";
   width: 20px;
   height: 2px;
   background: #f8f8f8;
+  transform: rotate(135deg);
   transition: all 0.4s ease;
 }
-.container .nav {
-  opacity: 0;
+#FAB .container .nav {
+  opacity: 1;
   transition: all 0.4s ease-in-out;
-  background: #fff;
+  background: rgba(239, 239, 236, 0.75);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   width: 100%;
   border-radius: 20px;
   transform: translateX(0%);
   box-shadow: 2px 3px 10px 0 rgba(81, 81, 81, 0.1);
   border: 1px solid #e4e4e4;
   padding: 10px;
+  z-index: 0;
+  pointer-events: none;
 }
-.container .nav ul {
+#FAB .container .nav ul {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
-.container .nav a {
+#FAB .container .nav a {
   text-align: center;
   margin: 20px 0;
-  color: #e48f10;
   font-weight: 600;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-size: 1.1rem;
+  color: rgb(65, 65, 65);
+  transition: color 0.3s ease-in-out;
+  pointer-events: auto;
 }
-.container .nav a:hover {
-  color: #C784DD;
+#FAB .container .nav a:hover {
+  color: #e48f10;
 }
-.container #toggle:checked ~ .nav {
-  opacity: 1;
+#FAB .container #toggle:checked ~ .nav ul a {
+  pointer-events: none;
+}
+#FAB .container #toggle:checked ~ .nav {
+  opacity: 0;
+  z-index: -2;
   transform: translateX(10%);
 }
-.container #toggle:checked ~ .button:before {
-  transform: rotate(225deg);
+#FAB .container #toggle:not(:checked) ~ .nav {
+  pointer-events: auto;
 }
-.container #toggle:checked ~ .button:after {
-  transform: rotate(135deg);
+#FAB .container #toggle:not(:checked) ~ .button {
+  background: #e30d0d;
+}
+#FAB .container #toggle:checked ~ .button:before {
+  transform: rotate(90deg);
+}
+#FAB .container #toggle:checked ~ .button:after {
+  transform: rotate(180deg);
 }
 @media (max-width: 640px) {
-  .container .container {
+  #FAB .container .container {
     width: 100%;
   }
 }
 
 #Footer {
+  position: relative;
   padding-top: 5rem;
   height: 30rem;
   max-width: 1920px;
   margin: auto;
 }
 #Footer .site-footer {
-  font-size: 15px;
   line-height: 24px;
-  color: #313131;
   height: 100%;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -792,13 +823,9 @@ body {
 #Footer .site-footer .footer-container {
   background-color: rgb(239, 239, 236);
   padding: 5rem 0;
-  width: 95%;
+  width: 100%;
   margin: auto;
   border-radius: 20px;
-}
-#Footer .site-footer .footer-container hr {
-  margin: auto auto 3rem auto;
-  width: 95%;
 }
 #Footer .site-footer .footer-container .row {
   display: flex;
@@ -819,7 +846,7 @@ body {
 #Footer .site-footer .footer-container .row .block-1 {
   display: flex;
   flex-direction: column;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 @media screen and (max-width: 800px) {
   #Footer .site-footer .footer-container .row .block-1 {
@@ -838,7 +865,7 @@ body {
 }
 #Footer .site-footer .footer-container .row .block-1 .block-1-button {
   width: 60%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1rem;
   padding: 0.9rem;
   border-radius: 25px;
