@@ -52,6 +52,7 @@ cells.forEach(cell => {
 
 
 // FAB event listener JS 
+
 const container = document.querySelector('.container');
 const checkbox = document.getElementById('toggle');
 
