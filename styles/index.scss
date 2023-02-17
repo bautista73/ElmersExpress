@@ -936,6 +936,7 @@ body {
                 border-radius: 25px;
                 border: 2px solid $accent-yellow;
                 font-weight: 600;
+                color: $accent-dark-gray;
                 background-color: $accent-yellow;
                 transition: background-color 0.5s ease;
                 &:hover {
@@ -1019,6 +1020,7 @@ body {
                 border-radius: 25px;
                 border: 2px solid $accent-yellow;
                 font-weight: 600;
+                color: $accent-dark-gray;
                 background-color: $base-light;
                 transition: background-color 0.5s ease;
                 &:hover {
@@ -1038,6 +1040,7 @@ body {
                 border-radius: 25px;
                 border: 2px solid $accent-yellow;
                 font-weight: 600;
+                color: $accent-dark-gray;
                 background-color: $accent-yellow;
                 transition: background-color 0.5s ease;
                 &:hover {
@@ -1137,12 +1140,13 @@ body {
                         border-radius: 25px;
                         border: 2px solid $accent-yellow;
                         font-weight: 600;
+                        color: $accent-dark-gray;
                         background-color: $accent-yellow;
                         transition: background-color 0.5s ease;
                         &:hover {
                             background-color: $base-light;
                         }
-                        @media screen and (max-width: 321px) {
+                        @media screen and (max-width: 450px) {
                             width: 80%;
                         }
                     }

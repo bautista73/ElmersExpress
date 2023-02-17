@@ -940,6 +940,7 @@ body {
   border-radius: 25px;
   border: 2px solid #FFD00F;
   font-weight: 600;
+  color: #313131;
   background-color: #FFD00F;
   transition: background-color 0.5s ease;
 }
@@ -1034,6 +1035,7 @@ body {
   border-radius: 25px;
   border: 2px solid #FFD00F;
   font-weight: 600;
+  color: #313131;
   background-color: #f8f8f8;
   transition: background-color 0.5s ease;
 }
@@ -1057,6 +1059,7 @@ body {
   border-radius: 25px;
   border: 2px solid #FFD00F;
   font-weight: 600;
+  color: #313131;
   background-color: #FFD00F;
   transition: background-color 0.5s ease;
 }
@@ -1180,13 +1183,14 @@ body {
   border-radius: 25px;
   border: 2px solid #FFD00F;
   font-weight: 600;
+  color: #313131;
   background-color: #FFD00F;
   transition: background-color 0.5s ease;
 }
 #Footer .site-footer .footer-container .row .block-1 .block-1-button:hover {
   background-color: #f8f8f8;
 }
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 450px) {
   #Footer .site-footer .footer-container .row .block-1 .block-1-button {
     width: 80%;
   }
