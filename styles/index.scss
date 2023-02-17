@@ -546,20 +546,13 @@ body {
 
 #About {
     position: relative;
-    display: grid;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(500px, 1fr));
     max-width: 1920px;
     margin: auto;
 
-    @media screen and (min-width: 801px) and (max-width: 1112px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    @media screen and (max-width: 840px) {
+    @media screen and (max-width: 999px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -567,45 +560,47 @@ body {
 
     .about-leftBlock {
         margin: 2rem;
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        padding-top: 28%;
+        @media screen and (max-width: 999px)  {
+            width: 90%;
+            padding-top: 50%;
+        }
         @media screen and (max-width: 420px) {
             margin: 1rem;
         }
         iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
             border: 1px solid $base-dark;
             border-radius: 20px;
-            @media screen and (max-width: 600px)  {
-                width: 520px;
-                height: 300px;
-            }
-            @media screen and (max-width: 420px) {
-                width: 370px;
-                height: auto;
-            }
-            @media screen and (max-width: 321px) {
-                width: auto;
-            }
         }
     }
     .about-rightBlock {
         padding: 2rem;
         height: 90%;
+        max-width: 700px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+        gap: 1rem;
 
-        @media screen and (min-width: 750px) and (max-width: 1120px) {
-            align-items: center;
-            gap: 1rem;
+        @media screen and (max-width: 999px) {
+            max-width: 90%;
         }
 
         @media screen and (max-width: 420px) {
             padding: 1.5rem;
         }
 
-        @media screen and (max-width: 1366px) {
-            width: 90%;
-        }
         @media screen and (max-width: 321px) {
             width: 100%;
             padding: 1rem;
@@ -617,7 +612,7 @@ body {
         p {
             font-size: 1.1rem;
             color: $accent-gray;
-            line-height: 2rem;
+            line-height: 2.5rem;
             @media screen and (max-width: 840px) {
                 padding: 0.5rem 0;
             }
@@ -639,14 +634,15 @@ body {
                 margin: auto;
             }
             li {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 padding-right: 2.5rem;
-                font-weight: 500;
+                font-weight: 600;
                 color: $accent-orange;
                 @media screen and (max-width: 1366px) {
                     font-size: 1rem;
                     padding-right: 1.1rem;
                 }
+                
             }
         }
     }
