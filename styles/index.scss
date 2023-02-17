@@ -379,9 +379,6 @@ body {
             align-items: center;
             justify-content: center;
 
-            @media screen and (max-width: 450px) {
-                padding: 1.5rem;
-            }
             @media screen and (max-width: 999px) {
                 width: 90%;
             }
@@ -461,7 +458,7 @@ body {
             gap: 1rem;
             & button {
                 padding: 30px;
-                width: 80%;
+                width: 85%;
             }
         }
     }
@@ -742,7 +739,7 @@ body {
         }
 
         @media screen and (max-width: 450px) {
-            padding: 1.5rem;
+            padding: 0;
         }
 
         @media screen and (max-width: 321px) {
@@ -797,7 +794,7 @@ body {
     margin: auto;
     padding: 30px;
     @media screen and (max-width: 450px) {
-        padding: 1.5rem;
+        padding: 1rem;
     }
     @media screen and (max-width: 321px) {
         padding: 0.5rem;
@@ -962,7 +959,7 @@ body {
         display: flex;
         flex-direction: column;
     }
-    @media screen and (max-width: 321px) {
+    @media screen and (max-width: 450px) {
         padding: 0;
     }
 
@@ -1062,6 +1059,7 @@ body {
     max-width: 1920px;
     margin: auto;
     @media screen and (max-width: 450px) {
+        width: 97%;
         padding: 0;
     }
     .site-footer {
@@ -1071,7 +1069,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        @media screen and (max-width: 321px) {
+        @media screen and (max-width: 450px) {
             padding: 1rem;
         }
         .footer-container {
@@ -1080,6 +1078,9 @@ body {
             width: 100%;
             margin: auto;
             border-radius: 20px;
+            @media screen and (max-width: 450px) {
+                padding: 2.5rem;
+            }
             .row {
                 display: flex;
                 justify-content: space-evenly;
@@ -1163,6 +1164,10 @@ body {
                         padding: 0 1rem;
                         @media screen and (max-width: 840px) {
                             margin-top: 2rem;
+                        }
+                        @media screen and (max-width: 450px) {
+                            margin-top: 1rem;
+                            padding: 0;
                         }
 
                         h6 {

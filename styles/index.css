@@ -375,11 +375,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 450px) {
-  #Home .home-hero .home-hero-rightBlock {
-    padding: 1.5rem;
-  }
-}
 @media screen and (max-width: 999px) {
   #Home .home-hero .home-hero-rightBlock {
     width: 90%;
@@ -465,7 +460,7 @@ body {
   }
   #Home .home-quick-links button {
     padding: 30px;
-    width: 80%;
+    width: 85%;
   }
 }
 
@@ -725,7 +720,7 @@ body {
 }
 @media screen and (max-width: 450px) {
   #About .about-rightBlock {
-    padding: 1.5rem;
+    padding: 0;
   }
 }
 @media screen and (max-width: 321px) {
@@ -793,7 +788,7 @@ body {
 }
 @media screen and (max-width: 450px) {
   #Reviews {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 }
 @media screen and (max-width: 321px) {
@@ -968,7 +963,7 @@ body {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 450px) {
   #CTA {
     padding: 0;
   }
@@ -1083,6 +1078,7 @@ body {
 }
 @media screen and (max-width: 450px) {
   #Footer {
+    width: 97%;
     padding: 0;
   }
 }
@@ -1094,7 +1090,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 450px) {
   #Footer .site-footer {
     padding: 1rem;
   }
@@ -1105,6 +1101,11 @@ body {
   width: 100%;
   margin: auto;
   border-radius: 20px;
+}
+@media screen and (max-width: 450px) {
+  #Footer .site-footer .footer-container {
+    padding: 2.5rem;
+  }
 }
 #Footer .site-footer .footer-container .row {
   display: flex;
@@ -1214,6 +1215,12 @@ body {
 @media screen and (max-width: 840px) {
   #Footer .site-footer .footer-container .row .block-wrapper .block-2, #Footer .site-footer .footer-container .row .block-wrapper .block-3, #Footer .site-footer .footer-container .row .block-wrapper .block-4 {
     margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  #Footer .site-footer .footer-container .row .block-wrapper .block-2, #Footer .site-footer .footer-container .row .block-wrapper .block-3, #Footer .site-footer .footer-container .row .block-wrapper .block-4 {
+    margin-top: 1rem;
+    padding: 0;
   }
 }
 #Footer .site-footer .footer-container .row .block-wrapper .block-2 h6, #Footer .site-footer .footer-container .row .block-wrapper .block-3 h6, #Footer .site-footer .footer-container .row .block-wrapper .block-4 h6 {
