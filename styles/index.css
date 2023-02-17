@@ -219,6 +219,7 @@ body {
 @media screen and (max-width: 999px) {
   #Home .home-hero .home-hero-leftBlock {
     padding: 1.5rem;
+    gap: 1.2rem;
   }
 }
 #Home .home-hero .home-hero-leftBlock .home-hero-brand {
@@ -651,7 +652,7 @@ body {
 }
 
 #Reviews {
-  max-width: 1920px;
+  max-width: 1320px;
   margin: auto;
   padding: 30px;
 }
@@ -671,7 +672,7 @@ body {
   align-items: center;
   text-align: center;
   margin: auto;
-  padding: 4rem;
+  padding: 2rem;
   height: 85%;
   background-color: #FFD00F;
   border-radius: 20px;
@@ -689,7 +690,7 @@ body {
 #Reviews .reviews-Block .review-top-wrapper p {
   margin-top: 1rem;
   font-size: 1.1rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   color: #060606;
 }
 @media screen and (max-width: 420px) {

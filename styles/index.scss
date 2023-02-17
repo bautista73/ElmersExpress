@@ -213,6 +213,7 @@ body {
             line-height: 2.5rem;
             @media screen and (max-width: 999px) {
                 padding: 1.5rem;
+                gap: 1.2rem;
             }
             .home-hero-brand {
                 font-family: 'Kantumruy', sans-serif;
@@ -649,7 +650,7 @@ body {
 }
 
 #Reviews {
-    max-width: 1920px;
+    max-width: 1320px;
     margin: auto;
     padding: 30px;
     @media screen and (max-width: 420px) {
@@ -666,7 +667,7 @@ body {
             align-items: center;
             text-align: center;
             margin: auto;
-            padding: 4rem;
+            padding: 2rem;
             height: 85%;
             background-color: $accent-yellow;
             border-radius: 20px;
@@ -681,7 +682,7 @@ body {
             p {
                 margin-top: 1rem;
                 font-size: 1.1rem;
-                line-height: 3rem;
+                line-height: 2.5rem;
                 color: $base-dark;
                 @media screen and (max-width: 420px) {
                     line-height: 2rem;
