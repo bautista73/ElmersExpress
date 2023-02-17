@@ -16,7 +16,23 @@
 <body>
     <header id="Header">
         <nav class="header-nav">
-            <div class="FAB-placeholder"></div>
+            <div id="FAB">
+                <div class="container">
+                    <input type="checkbox" id="toggle" checked/>
+                    <label class="button" for="toggle"></label>
+                    <label class="btn-line" for="toggle"></label>
+                    <nav class="nav">
+                        <ul>
+                            <a href="index.html">Home</a>
+                            <a href="services.html">Services</a>
+                            <a href="estimates.html">Estimates</a>
+                            <a href="payments.html">Payments</a>
+                            <a href="about.html">About</a>
+                            <a href="#">(425) 791-6151</a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>   
             <img class="nav-logo" src="/resources/Images/MainLogo.svg" alt="Elmers Express"/>
             <ul class="nav-tabs">
               <li><a href="index.html">Home</a></li>
@@ -30,7 +46,7 @@
         </nav>
     </header>
     <main>
-        <div id="FAB">
+        <!-- <div id="FAB">
             <div class="container">
                 <input type="checkbox" id="toggle" checked/>
                 <label class="button" for="toggle"></label>
@@ -46,7 +62,7 @@
                     </ul>
                 </nav>
             </div>
-        </div>         
+        </div>          -->
         <section id="Home">
             <div class="home-hire-banner">
                 <span>We're hiring movers and drivers! Call Elmer for more details or <a class="hire-banner-apply" href="#">Click here to apply</a>.</span>
@@ -349,19 +365,21 @@
                                 <li><a href="#">Long Distance Moving</a></li>
                             </ul>
                         </div>
-                        <div class="block-3">
-                            <h6>About Us</h6>
-                            <ul class="footer-links">
-                                <li><a href="#">About Elmer's Express</a></li>
-                                <li><a href="#">Our Team</a></li>
-                            </ul>
-                        </div>
-                        <div class="block-4">
-                            <h6>Careers</h6>
-                            <ul class="footer-links">
-                                <li><a href="#">Become a mover</a></li>
-                                <li><a href="#">Become a driver</a></li>
-                            </ul>
+                        <div class="wrapper-media-query">
+                            <div class="block-3">
+                                <h6>About Us</h6>
+                                <ul class="footer-links">
+                                    <li><a href="#">About Elmer's Express</a></li>
+                                    <li><a href="#">Our Team</a></li>
+                                </ul>
+                            </div>
+                            <div class="block-4">
+                                <h6>Careers</h6>
+                                <ul class="footer-links">
+                                    <li><a href="#">Become a mover</a></li>
+                                    <li><a href="#">Become a driver</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
